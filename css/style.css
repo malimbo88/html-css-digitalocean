@@ -1,0 +1,75 @@
+/* StyleCSS */
+/* General */
+.wrapper_95 {
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* HEADER */
+/* NAVIGATION */
+/*General navigation*/
+.ms_nav {
+  font-family: 'Roboto', sans-serif;
+  color: #031b4e;
+  font: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.ms_nav ul {
+  margin-bottom: 0px;
+  list-style: none;
+}
+
+.ms_nav li {
+  display: inline-block;
+  line-height: 64px;
+}
+
+.ms_nav li:not(:last-child) {
+  padding-right: 20px;
+}
+
+.ms_nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.ms_nav a:not(.ms_sign_up):hover {
+  color: #0069ff;
+}
+
+.ms_nav i {
+  vertical-align: middle;
+}
+
+/* right menu */
+.ms_user_btn {
+  color: #0069ff;
+  border: 1px solid #0069ff;
+  border-radius: 5px;
+  padding: 8px 16px;
+}
+
+.ms_user_btn:hover {
+  background-color: #0069ff;
+  color: #fff;
+}
+
+/* logo menu */
+.ms_logo_menu {
+  line-height: 64px;
+}
+.ms_logo_menu img {
+  height: 32px;
+}
+
+/* hamburger menu */
+.ms_hamburger_menu i {
+    color: #0069ff;
+    font-size: 16px;
+}
+
+/* MAIN */
+/* General MAIN */
+/* Section */
