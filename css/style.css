@@ -1,15 +1,23 @@
 /* StyleCSS */
+/*ms_Reset*/
+a:hover, a:focus {
+  text-decoration: none;
+}
+
 /* General */
-.wrapper_95 {
-  width: 95%;
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper_98 {
+  width: 98%;
   margin: 0 auto;
 }
 
 /* HEADER */
 /* NAVIGATION */
-/*General navigation*/
+/* General navigation */
 .ms_nav {
-  font-family: 'Roboto', sans-serif;
   color: #031b4e;
   font: 16px;
   font-weight: 500;
@@ -23,11 +31,11 @@
 
 .ms_nav li {
   display: inline-block;
-  line-height: 64px;
+  line-height: 70px;
 }
 
 .ms_nav li:not(:last-child) {
-  padding-right: 20px;
+  padding-right: 24px;
 }
 
 .ms_nav a {
@@ -41,6 +49,7 @@
 
 .ms_nav i {
   vertical-align: middle;
+  padding-left: 4px;
 }
 
 /* right menu */
@@ -60,11 +69,16 @@
 .ms_logo_menu {
   line-height: 64px;
 }
+
 .ms_logo_menu img {
   height: 32px;
 }
 
 /* hamburger menu */
+.ms_hamburger_menu {
+  line-height: 70px;
+}
+
 .ms_hamburger_menu i {
     color: #0069ff;
     font-size: 16px;
@@ -72,4 +86,136 @@
 
 /* MAIN */
 /* General MAIN */
-/* Section */
+.ms_primary {
+  color: #fff;
+  padding: 64px 0px;
+}
+
+.ms_primary h1 {
+  font-weight: bolder;
+  text-transform: capitalize;
+  text-align: center;
+  margin: 0px;
+  padding: 0px 0px 12px 0px;
+}
+
+.ms_primary p {
+  font-size: 24px;
+  margin: 0px;
+}
+
+/* Section jumbotrone */
+.ms_jumbo {
+  background-image: url("../img/bg-home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* main title */
+.ms_head_title h1 {
+  font-size: 60px;
+  text-align: left;
+}
+/* get started */
+.ms_get_started_box {
+  background-color: #fff;
+  padding: 40px 16px;
+  border-radius: 8px;
+}
+
+.ms_get_started h3:first-line {
+  color: #031b4e;
+}
+
+.ms_get_started h3 {
+  text-align: center;
+  color: #0069ff;
+  font-weight: bolder;
+  font-size: 32px;
+  line-height: 1.4;
+  margin-top: 0px;
+}
+
+/* started sign-in form */
+.ms_style_form {
+  height: 48px;
+  font-size: 16px;
+}
+
+.ms_style_form::placeholder {
+  color: #666666;
+}
+
+/* started sign-in btn */
+.ms_sign_in_btn {
+  line-height: 40px;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.ms_create_account {
+  background-color: #0069ff;
+  margin-bottom: 16px;
+}
+
+.ms_create_account span {
+  color: #fff;
+}
+
+.ms_sign_up_google {
+  box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.15);
+}
+
+.ms_sign_up_google span {
+  color: #031b4e;
+}
+
+.ms_sign_up_google img {
+  height: 24px;
+}
+
+.ms_terms_services {
+  color: #031b4e;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.ms_terms_services p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.ms_terms_services a {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
