@@ -1,5 +1,19 @@
-/* StyleCSS */
+/**** StyleCSS ****/
+
 /*ms_Reset*/
+h1, h2, h3, h4, h5, p, hr, blockquote, ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+hr {
+  display: block;
+  border-style: none;
+  border: 0px;
+  height: 1px;
+}
+
 a:hover, a:focus {
   text-decoration: none;
 }
@@ -14,9 +28,13 @@ body {
   margin: 0 auto;
 }
 
-/* HEADER */
-/* NAVIGATION */
-/* General navigation */
+span.ms_text_none {
+  display: none;
+}
+
+/**** HEADER ****/
+
+/* general Main navigation */
 .ms_nav {
   color: #031b4e;
   font: 16px;
@@ -25,7 +43,6 @@ body {
 }
 
 .ms_nav ul {
-  margin-bottom: 0px;
   list-style: none;
 }
 
@@ -52,7 +69,16 @@ body {
   padding-left: 4px;
 }
 
-/* right menu */
+/* logo-left menu */
+.ms_logo_menu {
+  line-height: 64px;
+}
+
+.ms_logo_menu img {
+  height: 32px;
+}
+
+/* user-right menu */
 .ms_user_btn {
   color: #0069ff;
   border: 1px solid #0069ff;
@@ -65,18 +91,10 @@ body {
   color: #fff;
 }
 
-/* logo menu */
-.ms_logo_menu {
-  line-height: 64px;
-}
-
-.ms_logo_menu img {
-  height: 32px;
-}
-
 /* hamburger menu */
 .ms_hamburger_menu {
   line-height: 70px;
+  text-align: right;
 }
 
 .ms_hamburger_menu i {
@@ -84,138 +102,637 @@ body {
     font-size: 16px;
 }
 
-/* MAIN */
-/* General MAIN */
-.ms_primary {
-  color: #fff;
+/**** MAIN ****/
+
+/* general ms_section */
+.ms_section {
   padding: 64px 0px;
 }
 
-.ms_primary h1 {
+.ms_section_lower {
+ padding: 32px 0px;
+}
+
+/* MEDIA QUERY general ms_section */
+@media all and (max-width: 768px){
+  .ms_section {
+    padding: 32px 0px;
+  }
+}
+
+/* general ms_primary */
+.ms_primary {
+  color: #fff;
   font-weight: bolder;
+}
+
+.ms_primary h1,
+.ms_primary h2,
+.ms_primary p {
+  padding-bottom: 12px;
+}
+
+.ms_primary hr {
+  background-color: #fff;
+  margin: 12px 0px;
+}
+
+.ms_primary h1 {
+  font-size: 56px;
   text-transform: capitalize;
+}
+
+.ms_primary h2 {
   text-align: center;
-  margin: 0px;
-  padding: 0px 0px 12px 0px;
+  font-size: 40px;
 }
 
 .ms_primary p {
-  font-size: 24px;
-  margin: 0px;
+  font-size: 20px;
+  color: #baccff;
+  font-weight: normal;
 }
 
-/* Section jumbotrone */
+/* general ms_secondary */
+.ms_secondary {
+  color: #031b4e;
+}
+
+.ms_secondary h2,
+.ms_secondary h4,
+.ms_secondary h5,
+.ms_secondary p {
+  padding-bottom: 12px;
+  text-align: center;
+}
+
+.ms_secondary h2 {
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.ms_secondary h4 {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #77829d;
+  font-size: 20px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.ms_secondary h5 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bolder;
+  font-size: 18px;
+  padding: 18px 0px;
+  text-align: left;
+}
+
+.ms_secondary p {
+  color: #77829d;
+  font-size: 20px;
+}
+
+/* view link */
+.ms_view_link a > span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* general Info box */
+.ms_info_box {
+  font-family: 'Roboto Condensed', sans-serif;
+  padding-right: 40px;
+}
+
+.ms_info_box p {
+ text-align: left;
+ font-size: 16px;
+}
+
+.ms_info_box img {
+  height: 44px;
+}
+
+/* ms Slider */
+.ms_slider {
+  width: 70%;
+  margin: 0px auto;
+  max-width: 992px;
+  padding-top: 48px;
+}
+
+.ms_slider_main {
+  position: relative;
+}
+
+.ms_slider_main .ms_slider_page {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.ms_slider_main .ms_arrow {
+  position: absolute;
+  color: #77829d;
+  font-size: 40px;
+  top: 50%;
+  transform: translateY( -50% );
+}
+
+.ms_slider_main a:active .ms_arrow {
+  color: #031b4e;
+}
+
+.ms_arrow.ms_slider_left {
+  left: 0px;
+}
+
+.ms_arrow.ms_slider_right {
+  right: 0px;
+}
+
+.ms_slider_content img {
+  width: 100%;
+}
+
+.ms_slider_footer {
+  padding-top: 12px;
+  text-align: center;
+}
+
+.ms_slider_footer p {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 18px;
+  color: #031b4e;
+}
+
+.ms_slider_circles li {
+  margin: 1px;
+  padding: 0px;
+}
+
+.ms_slider_circles .ms_active {
+  border: 1.5px solid #337ab7;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+}
+
+.ms_slider_circles a:active .ms_active {
+  background-color: #337ab7;
+}
+
+/* ms_quote */
+.ms_quote p {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #031b4e;
+  font-weight: bolder;
+  font-size: 18px;
+  padding: 0px;
+}
+
+p.sub_quote {
+  font-weight: normal;
+}
+
+/* account subscribe general btn */
+.ms_general_btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 24px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+/** Section jumbotrone **/
 .ms_jumbo {
   background-image: url("../img/bg-home.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.ms_jumbo_box {
+  padding: 0px 8px;
+}
+
 /* main title */
-.ms_head_title h1 {
-  font-size: 60px;
+.ms_head_title {
+  padding-top: 44px;
+}
+
+.ms_head_title p {
   text-align: left;
 }
+
+/* MEDIA QUERY main title */
+@media all and ( max-width: 1200px) {
+  .ms_primary h1 {
+    font-size: 48px;
+  }
+}
+
+@media all and ( max-width: 992px) {
+  .ms_head_title {
+    padding-top: 22px;
+  }
+}
+
+@media all and ( max-width: 768px) {
+  .ms_head_title {
+    padding-top: 0px;
+  }
+}
+
 /* get started */
-.ms_get_started_box {
+.ms_get_started {
   background-color: #fff;
-  padding: 40px 16px;
+  padding: 32px 16px;
   border-radius: 8px;
+  text-align: center;
+}
+
+.ms_get_started h3, .ms_form_reset, .ms_create_account {
+  margin: 8px 0px;
+}
+
+.ms_get_started .ms_style_form, .ms_sign_in_btn {
+  font-size: 14px;
+}
+
+.ms_get_started h3 {
+  color: #0069ff;
+  font-weight: bolder;
+  font-size: 32px;
+  line-height: 1.4;
 }
 
 .ms_get_started h3:first-line {
   color: #031b4e;
 }
 
-.ms_get_started h3 {
-  text-align: center;
-  color: #0069ff;
-  font-weight: bolder;
-  font-size: 32px;
-  line-height: 1.4;
-  margin-top: 0px;
-}
-
 /* started sign-in form */
 .ms_style_form {
-  height: 48px;
-  font-size: 16px;
+  height: 40px;
+  font-weight: normal;
 }
 
 .ms_style_form::placeholder {
   color: #666666;
 }
 
-/* started sign-in btn */
+/* started sign-in btn general */
 .ms_sign_in_btn {
   line-height: 40px;
   border-radius: 4px;
-  font-size: 16px;
-  text-align: center;
 }
 
+/* my account btn */
 .ms_create_account {
   background-color: #0069ff;
-  margin-bottom: 16px;
 }
 
-.ms_create_account span {
+.ms_create_account a > span {
   color: #fff;
+  font-weight: normal;
 }
 
+/* google sign_up btn */
 .ms_sign_up_google {
   box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.15);
 }
 
 .ms_sign_up_google span {
   color: #031b4e;
+  font-weight: normal;
 }
 
 .ms_sign_up_google img {
   height: 24px;
 }
 
+/* link term service */
 .ms_terms_services {
-  color: #031b4e;
   margin-top: 16px;
   text-align: center;
 }
 
 .ms_terms_services p {
+  color: #031b4e;
   font-size: 14px;
   font-weight: 500;
 }
 
-.ms_terms_services a {
+.ms_terms_services a > span {
   text-decoration: underline;
 }
 
+/** Section customers **/
+.ms_customers {
+  background-color: #f3f5f9;
+}
 
+.ms_customers li {
+  display: inline-block;
+  padding: 0px 15px;
+  width: calc( ( 100% / 6 ) - 3px );
+}
 
+.ms_customers li:not(:last-child) {
+  padding-right: 15px;
+}
 
+.ms_customers li > a > img {
+  width: 100%;
+}
 
+/* MEDIA QUERY section customers */
+@media all and (max-width: 768px) {
+  .ms_customers li {
+    display: inline-block;
+    width: calc( ( 100% / 2 ) - 3px );
+  }
+}
 
+/** Section workflow solutions **/
+.ms_workflow_wrapper {
+  padding: 48px 72px 0px 72px;
+}
 
+/* MEDIA QUERY wrapper workflow */
+@media all and (max-width: 992px){
+  .ms_workflow_wrapper {
+    padding: 48px 0px 0px 0px;
+  }
+}
 
+/* workflow solutions menu */
+.ms_workflow_nav {
+  padding-bottom: 48px;
+}
 
+.ms_workflow_nav li {
+  border-left: 2px solid #d9d9d9;
+  line-height: 44px;
+  padding-left: 12px;
+}
 
+.ms_workflow_nav li:hover {
+  border-left: 2px solid #031b4e;
+}
 
+.ms_workflow_nav li a > span {
+  color: #77829d;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 400;
+}
 
+.ms_workflow_nav li a:hover > span {
+  color: #031b4e;
+}
 
+/* workflow text box */
+.ms_workflow_solutions .ms_info_box {
+  padding-bottom: 32px;
+}
 
+/** Section Landing page **/
+.ms_landing_page {
+  background-color: #f3f5f9;
+}
 
+/** Section features **/
+.ms_features_text {
+  padding-top: 48px;
+}
 
+/* MEDIA QUERY features */
+@media all and (max-width: 992px){
+  .ms_features .ms_info_box {
+    padding-bottom:40px;
+  }
+}
 
+/*** Section world services ***/
+.ms_world_services {
+  background-image: linear-gradient(rgba(0,72,197,1), rgba(0,30,154,1) );
+}
 
+.ms_table_wrapper {
+  padding-top: 32px;
+}
 
+.ms_connections, .ms_cities, .ms_test_speed {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
 
+.ms_connections {
+  font-weight: bold;
+}
 
+.ms_cities {
+  color: #baccff;
+}
 
+.ms_test_speed span {
+  color: #00bccd;
+}
 
+/* MEDIA QUERY Section world services */
+@media all and (max-width: 992px){
+  .ms_bottom_right.ms_table_wrapper {
+    padding: 0px;
+  }
+  .ms_top_left.ms_table_wrapper {
+    padding: 32px 0px;
+  }
+}
 
+/*** Section supporters ***/
+.ms_supporters {
+  background-color: #f3f5f9;
+}
 
+.ms_slider_box {
+  background-color: #fff;
+  padding: 64px 8px;
+}
 
+.ms_slider_box > *:not(:first-child) {
+  padding-top: 24px;
+}
 
+.ms_supporters .ms_slider_content img {
+  margin: 0 auto;
+  display: block;
+  width: 50%;
+}
 
+.ms_supporters .ms_slider_content blockquote {
+  text-align: center;
+  font-size: 18px;
+  border: 0px;
+  color: #77829d;
+  padding-top: 32px;
+}
 
+.ms_supporters .ms_slider_footer {
+  padding-top: 32px;
+}
 
-/**/
+/*** Section subscribe ***/
+.ms_subscribe {
+  background-image: linear-gradient(rgba(0,72,197,1), rgba(0,30,154,1) );
+  text-align: center;
+}
+
+/*** FOOTER ***/
+
+/* general footer */
+/* ms social link lis icons */
+.ms_social_links {
+  padding-top: 4px;
+}
+.ms_social_links li a > i {
+  font-size: 22px;
+}
+
+/* copyright and made-in */
+.ms_copyright {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ms_made_in {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  color: #4d5d7e;
+}
+
+/* footer head*/
+.ms_footer_logo img {
+  height: 50px;
+}
+.ms_head_footer * {
+  color: #8993aa;
+}
+.ms_head_footer > *:not(.ms_social_links) {
+  color: #8993aa;
+  margin: 8px 0px;
+}
+
+/* footer menu */
+.ms_footer {
+  background-color: #031c4e;
+}
+.ms_footer_menu {
+  padding-top: 12px;
+}
+.ms_footer_menu li {
+  padding-bottom: 8px;
+}
+.ms_footer_menu h5 {
+  color: #fff;
+  font-size: 18px;
+}
+.ms_footer_menu a > span {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #8993aa;
+  font-size: 16px;
+}
+
+.ms_footer_menu a:hover span {
+  color: #fff;
+}
+
+/* Helping tool */
+/* help image */
+.ms_help_image {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+.ms_help_image_box {
+  height:64px;
+  position: relative;
+  background-color: #006aff;
+  border-radius: 8px;
+  width: 64px;
+}
+
+.ms_help_image img {
+  position: absolute;
+  width: 96%;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ms_counter {
+  display: inline-block;
+  background-color: #ff0000;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  padding: 2px 8px;
+  top: -15px;
+  right: -15px;
+}
+
+.ms_counter span {
+  color: #fff;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* help message */
+.ms_help_message {
+  position: fixed;
+  bottom: 30px;
+  right: 120px;
+}
+
+.ms_message_content {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 250px;
+  padding: 12px 8px;
+  position: relative;
+}
+
+.ms_message_arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 10px solid #fff;
+  position: absolute;
+  top: 37px;
+  right: -8px;
+}
+
+.ms_help_message span {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #031b4e;
+}
+
+/*MEDIA QUERY Helping tool */
+@media all and (max-width: 992px){
+  .ms_help_image {
+    position: fixed;
+    bottom: 115px;
+    left: 30px;
+  }
+
+  .ms_help_message {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+  }
+}
